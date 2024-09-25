@@ -33,23 +33,23 @@ for (i = 5, j = 6; i >= 0; i--){
     j--;
 } */
 
-/*    let movies = ["Inception", "Interstellar", "The Matrix"];
+   /* let movies = ["Inception", "Interstellar", "The Matrix"];
 for (let movie of movies) {
    console.log(movie);
-} */
+}
 
-// let groceries = ["Milk", "Bread", "Eggs"];
-// groceries.forEach(function(item) {
-//     console.log(item);
-// });
+let groceries = ["Milk", "Bread", "Eggs"];
+groceries.forEach(function(item) {
+    console.log(item);
+});
 
-// let numbers = [1, 2, 3, 4];
-// let squares = numbers.map(function(num) {
-//     return num * num;
-// });
-// console.log(squares);
+let numbers = [1, 2, 3, 4];
+let squares = numbers.map(function(num) {
+    return num * num;
+});
+console.log(squares);
 
-
+ */
 // 1st sum
 
 /* let a = [1,2,3,4,5];
@@ -185,19 +185,48 @@ else{
     console.log(h); */
 
 // 4th sum
-function Average(populations){
-    let sum = 0;
-    let i = 0;
-    for( let a = i; a < populations.length; a++){
-        sum +=populations[a];
+// function Average(populations){
+//     let sum = 0;
+//     let i = 0;
+//     for( let a = i; a < populations.length; a++){
+//         sum +=populations[a];
+//     }
+//         return sum/populations.length ;
+// }
+// let l = Average([50, 60, 70, 80, 90,]);
+// console.log(l);
+
+// // 5th sum
+
+// function water(water_level){
+//     let lowest = water
+// }
+
+
+/* function digitSum(num){
+
+    let arr=num.toString().split(""); // ['1','2','3','4','5']
+    let sum=0;
+    for(let i=0;i<arr.length;i++){
+        sum=sum +  Number(arr[i]);  // '3' ---> 3
     }
-        return sum/populations.length ;
-}
-let l = Average([50, 60, 70, 80, 90,]);
-console.log(l);
+    return sum;
 
-// 5th sum
 
-function water(water_level){
-    let lowest = water
 }
+console.log(digitSum(1234)); */
+
+/* let nestedArray = [["a", "b", "c"], [1, 2, 3], [true, false]];
+console.log(nestedArray[2][1]);
+ */
+
+/* function digits(number){
+    let arrr = number.toString().split("");
+    let sums = 0;
+    for(let i = 0; i < arrr.length;i++){
+        sums = sums + Number(arrr[i]);
+    }
+    return sums;
+}
+
+console.log(digits(2345)); */
