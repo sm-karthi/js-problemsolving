@@ -41,8 +41,10 @@ discount(5, 2);
 
 // 5th sum
 function printAllMultiplesOf5Bet(a, b){
-    for(let i = b; i >= a; i-=5){
-        console.log(i);
+    for(let i = b; i >= a; i--){
+        if(i % 5 === 0){
+            console.log(i);
+        }
     }
 }
 printAllMultiplesOf5Bet(10,30);
