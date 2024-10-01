@@ -12,18 +12,17 @@ for(let i = user; i == 2; i++){
     console.log(c);
 }
  
-// correct code 
-
-    let users = 1;
-user = 2;
+// correct code
+let users = 1;
+users = 2;
 let ab = ["toy"];
 let bb = "choclate";
 let empty = [];
-if(user == 1){
+if(users == 1){
     empty.push(bb);
     console.log(empty);
 }
-else if(user == 2){
+else if(users == 2){
     let c = ab[0].split('').join('');
     console.log(c);
 }

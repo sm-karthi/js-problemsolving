@@ -263,12 +263,36 @@ let sum=arr.reduce((a,b)=>a+b);
 console.log(sum-Math.max(...arr),sum-Math.min(...arr));
  */
 
-let arr = [3, 2, 1, 3];
+/* let arr = [3, 2, 1, 3];
 let array = Math.max(...arr);
 let count = 0;
 for(let i = 0; i < arr.length; i++){
     if(arr[i] == array){
         count++;
     }
+} 
+console.log(count);*/
+
+/* let arrays = [1, 2, 3, 4, 5, 6];
+let empty = [];
+for(let i = 0; i < arrays.length; i += 2){
+    empty.push(arrays[i]);
 }
-console.log(count);
+console.log(empty); */
+
+let users = 1;
+user = 2;
+let ab = ["toy"];
+let bb = "choclate";
+let empty = [];
+if(user == 1){
+    empty.push(bb);
+    console.log(empty);
+}
+else if(user == 2){
+    let c = ab[0].split('').join('');
+    console.log(c);
+}
+else{
+    console.log([]);
+}
