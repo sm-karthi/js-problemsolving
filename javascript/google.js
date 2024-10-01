@@ -279,7 +279,7 @@ for(let i = 0; i < arrays.length; i += 2){
     empty.push(arrays[i]);
 }
 console.log(empty); */
-
+/* 
 let users = 1;
 user = 2;
 let ab = ["toy"];
@@ -295,4 +295,15 @@ else if(user == 2){
 }
 else{
     console.log([]);
+} */
+let arr = [1, 2, 3, 4, 5];
+
+let empty = [];
+for(let i = 0; i < arr.length; i++){
+    let sum = 0;
+    for(let j = i; j < arr.length; j++){
+        sum += arr[j];
+    }
+    empty.push(sum);
 }
+console.log(empty);
