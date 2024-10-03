@@ -296,14 +296,27 @@ else if(user == 2){
 else{
     console.log([]);
 } */
-let arr = [1, 2, 3, 4, 5];
+// let arr = [1, 2, 3, 4, 5];
 
-let empty = [];
-for(let i = 0; i < arr.length; i++){
-    let sum = 0;
-    for(let j = i; j < arr.length; j++){
-        sum += arr[j];
+// let empty = [];
+// for(let i = 0; i < arr.length; i++){
+//     let sum = 0;
+//     for(let j = i; j < arr.length; j++){
+//         sum += arr[j];
+//     }
+//     empty.push(sum);
+// }
+// console.log(empty);
+
+let n=3;
+let a=5;
+let b=7;
+let array=[];
+for(let i=1; i<=n; i++){
+    let num1=(n-i)*a;
+    for(let j=n; j>=1; j--){
+        num1+=(n-j)*b;
+        array.push(num1);
     }
-    empty.push(sum);
 }
-console.log(empty);
+console.log(array);
