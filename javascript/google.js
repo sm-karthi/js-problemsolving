@@ -279,8 +279,8 @@ for(let i = 0; i < arrays.length; i += 2){
     empty.push(arrays[i]);
 }
 console.log(empty); */
-/* 
-let users = 1;
+
+/* let users = 1;
 user = 2;
 let ab = ["toy"];
 let bb = "choclate";
@@ -296,19 +296,19 @@ else if(user == 2){
 else{
     console.log([]);
 } */
-// let arr = [1, 2, 3, 4, 5];
+ /* let arr = [1, 2, 3, 4, 5];
 
-// let empty = [];
-// for(let i = 0; i < arr.length; i++){
-//     let sum = 0;
-//     for(let j = i; j < arr.length; j++){
-//         sum += arr[j];
-//     }
-//     empty.push(sum);
-// }
-// console.log(empty);
-
-let n=3;
+let empty = [];
+for(let i = 0; i < arr.length; i++){
+    let sum = 0;
+    for(let j = i; j < arr.length; j++){
+        sum += arr[j];
+    }
+    empty.push(sum);
+}
+console.log(empty); 
+ */
+/* let n=3;
 let a=5;
 let b=7;
 let array=[];
@@ -319,4 +319,121 @@ for(let i=1; i<=n; i++){
         array.push(num1);
     }
 }
-console.log(array);
+console.log(array); */
+
+/* function Fibonacci(n){
+    if(n == 0){
+        return 0;
+    }
+    if(n == 1){
+        return 1;
+    }
+    if(n == 2){
+        return 1;
+    }
+    let a = [0, 1];
+    let sum = a[0] + a[1];
+    for(let i = 2; i < n; i++){
+        a[i] = a[i-1] + a[i-2];
+        sum+=a[i];
+    }
+    return sum;
+}
+console.log(Fibonacci(5)); */
+
+/* function sumFibonacci(n) {
+    if (n <= 0) return 0;
+    if (n === 1) return 0;
+    if (n === 2) return 1;
+
+    let fib = [0, 1];
+    let sum = fib[0] + fib[1];
+    for (let i = 2; i < n; i++) {
+        fib[i] = fib[i - 1] + fib[i - 2];
+        sum += fib[i];
+    }
+
+    return sum;
+}
+
+const n = 5;
+console.log(`Sum of the first ${n} Fibonacci numbers:`, sumFibonacci(n)); */
+
+/*
+* fibonacci(5) will print 1, 1, 2, 3, 5
+* Assuming n is always greater than 0 
+* n = 1, print 1
+* n = 2, print 1, 1
+*/
+/* function fibonacci(n) {
+    if (n === 1) {
+        console.log("1");
+        return;
+    }
+    if(n === 2) {
+        console.log("1, 1");
+        return;
+    }
+
+    let outputStr = "1, 1";
+    let pTerm = 1; // Previous Term
+    let ppTerm = 1;// Previous Pervious Term
+
+    for (let i = 3; i <= n; i++) {
+        currTerm = pTerm + ppTerm;
+        ppTerm = pTerm;
+        pTerm = currTerm;
+        outputStr = outputStr + ", " + currTerm;
+    }
+    console.log(outputStr);
+}
+fibonacci(7); */
+
+/* function fibonacci(n){
+    if(n == 1){
+        return n;
+    }
+    if(n == 2){
+        return n;
+    }
+    let str = "1, 1";
+    let pTerm = 1;
+    let ppTerm = 1;
+    for(let i = 3; i <= n; i++){
+        cuTerm = pTerm + ppTerm;
+        ppTerm = pTerm;
+        pTerm  = cuTerm;
+        str +=", "+cuTerm;
+    }
+    return str;
+}
+console.log(fibonacci(7)); */
+
+/* let arr = [2, 7, 5, 1];
+let empty = [];
+let length = arr.length
+for(let i = 0; i < length; i++){
+    let a = Math.min(...arr);
+   let index = arr.indexOf(a);
+   arr.splice(index,1);
+   empty.push(a);
+}
+console.log(empty); */
+
+let a = ["malayalam"];
+let d = a.toString();
+let b = d.split("").reverse().join("");
+if(d === b){
+    console.log("Yes");
+}
+else{
+    console.log("No");
+}
+
+
+
+
+
+   
+
+
