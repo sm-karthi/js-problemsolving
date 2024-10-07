@@ -420,7 +420,7 @@ for(let i = 0; i < length; i++){
 }
 console.log(empty); */
 
-let a = ["malayalam"];
+/* let a = ["malayalam"];
 let d = a.toString();
 let b = d.split("").reverse().join("");
 if(d === b){
@@ -428,7 +428,141 @@ if(d === b){
 }
 else{
     console.log("No");
+} */
+
+    /* let a = 10;
+    let b = 15;
+    let str = "";
+    for(let i = b; i > a; i--){
+        if(i % 2 == 0){
+           str += i + " ";
+        }
+    }
+    console.log(str);
+
+    let aa = 10;
+    let bb = 15;
+    let cc = 40;
+    
+        if(aa < cc && bb > cc){
+            console.log("Yes");
+            
+        }
+        else{
+            console.log("No");
+            
+        } */
+
+    /* let array = [11, 22, 77, 90, 60, 55];
+    let emptyArray = [];
+    for(let i = 0; i <array.length ; i++){
+        if(array[i] % 11 == 0){
+            emptyArray.push(array[i]);
+        }
+    }
+    console.log(emptyArray.reverse()); */
+
+    /* let a = 4;
+    let b = 10;
+    let sum = a + b;
+    if(sum % 7 == 0){
+        console.log("Yes");
+    }
+    else{
+        console.log("No");
+    }
+  */
+ /* let a = 5; 
+ let b = 10;
+ let sum = 0;
+ for(let i = a + 1; i < b; i++){
+    sum += i;
+ }
+ console.log(sum);
+     */
+
+    /* let a = 10;
+    if(a % 2 !== 0){
+        console.log("This odd number");
+    } 
+    else {
+        console.log("This is even number change a number");
+    } */
+    
+        /* let number=[100,200,300,450,500,400];
+        let highest =number[0];
+        let second =number[0];
+        for(let i=0; i<number.length; i++){
+            if(highest<number[i]){
+                 second=highest
+                highest =number[i]
+            }
+         else if(second<number[i]){
+                second =number[i]
+            }
+        }
+        console.log(second) */            
+
+/* let a = 12;
+let carNumber = [123, 344, 579, 688];
+let fine = [250, 500, 350, 200];
+let sum = 0;
+for(let i = 0; i < carNumber.length; i++){
+    if(a % 2 == 0 && carNumber[i] % 2 !==0){
+        sum += fine[i];
+    }
+    else if(a % 2 !== 0 && carNumber[i] % 2 == 0){
+        sum += fine[i];
+    }
 }
+console.log(sum); */
+
+let a = 7;
+let aa ="";
+for(let i = 1; i <= a; i++){
+    if(i % 2 != 0 && i % 3 != 0){
+        aa ="prime number";
+    }
+    else {
+        aa ="Not prime number";
+    }
+}
+console.log(aa);
+
+
+/* let c = 1;
+let d = 5;
+for(let i = c; i <= d; d--){
+    let str = " ";
+    for(let j = c; j <= d; j++){
+        str += j+" ";
+    }
+    console.log(str);
+} */
+
+let d=5;
+for(let i=1; i<=d; d--){
+    let str =" "
+    for(let j=1;j<=d;j++){
+        str=str+j+" "
+    }
+    console.log(str)
+}
+
+
+
+
+
+        
+
+    
+    
+    
+       
+    
+   
+    
+    
 
 
 

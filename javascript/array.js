@@ -42,14 +42,14 @@ let groceries = ["Milk", "Bread", "Eggs"];
 groceries.forEach(function(item) {
     console.log(item);
 });
-
-let numbers = [1, 2, 3, 4];
+*/
+/* let numbers = [1, 2, 3, 4];
 let squares = numbers.map(function(num) {
     return num * num;
 });
-console.log(squares);
+console.log(squares); */
 
- */
+ 
 // 1st sum
 
 /* let a = [1,2,3,4,5];
@@ -89,21 +89,21 @@ for(let i = 0 ; i < number.length; i++){
 }
 console.log(result); */
 
-// slack 1st sum
-// function train_time(train_departures){
-//     let early = train_departures[0];
-//    for(let i = 0; i < train_departures.length; i++){
-//     if (train_departures[i]<early) {
-//         early=train_departures[i];
-//     }
-//    }
-//    return early;
-// }
-// let a=train_time([10, 15, 7, 20, 5]);
-// console.log(a);
+//slack 1st sum
+/* function train_time(train_departures){
+    let early = train_departures[0];
+   for(let i = 0; i < train_departures.length; i++){
+    if (train_departures[i]<early) {
+        early=train_departures[i];
+    }
+   }
+   return early;
+}
+let a=train_time([10, 15, 7, 20, 5]);
+console.log(a); */
 
 // 2nd sum
-/* function seats_booking(seats) {
+ /* function seats_booking(seats) {
     let tickets_available = 0;
     for (let i = 0; i < seats.length; i++) {
         if (seats[i] == 0) {
@@ -125,12 +125,11 @@ function same_time(landing_times) {
     }
     return "no"
 }
-console.log(same_time([1, 12, 18, 12, 20]));
- */
+console.log(same_time([1, 12, 18, 12, 20])); */
+ 
 
 
 /////
-
 /* let arr=[12, 15, 12, 18, 20];
 let set_arr=[...new Set(arr)];
 if(arr.length!=set_arr.length){
@@ -138,7 +137,7 @@ if(arr.length!=set_arr.length){
 }
 else{
     console.log();
-} */
+}  */
 
 
 /* let arr=[12, 15, 11, 18, 20];
@@ -146,23 +145,17 @@ let set_arr=[...new Set(arr)];
 console.log(set_arr); */
 
 
-/* let arr=[12, 15, 18, 15, 20];
+ let arr=[12, 15, 18, 15, 20];
 arr.sort((a,b)=>a-b);
 let istrue=false;
 
 //[12,15,15,18,20]
-
-
+/* 
 for (let i = 0; i < arr.length; i++) {
     if (arr[i]==arr[i+1]) {
         istrue=true;  
     }
 }
-
-
-
-
-
 if (istrue) {
     console.log("yes");
     
@@ -170,7 +163,7 @@ if (istrue) {
 else{
     console.log("no");
     
-} */
+}  */
 // 3rd sum
 /* function heistNumber(solider){
         let heist = solider[0];
@@ -205,10 +198,10 @@ else{
 
 /* function digitSum(num){
 
-    let arr=num.toString().split(""); // ['1','2','3','4','5']
+    let arr=num.toString().split(""); // ['1','2','3','4']
     let sum=0;
     for(let i=0;i<arr.length;i++){
-        sum=sum +  Number(arr[i]);  // '3' ---> 3
+        sum+=Number(arr[i]);  // '3' ---> 3
     }
     return sum;
 

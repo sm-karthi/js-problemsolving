@@ -82,10 +82,54 @@ for(let i = 0; i < b.length; i++){
 }
 console.log(count); */
 
+/* let arr = [1, 2, 3, 4, 5];
 
+let empty = [];
+for(let i = 0; i < arr.length; i++){
+    let sum = 0;
+    for(let j = i; j < arr.length; j++){
+        sum += arr[j];
+    }
+    empty.push(sum);
+}
+console.log(empty);  */
 
+/* function vowelSum(a){
+let b = a.toString().split("");
+let count = 0;
+for(let i = 0; i < b.length; i++){
+    if(b[i] == "a" || b[i] == "e" || b[i] == "i" || b[i] == "o" || b[i] == "u"|| b[i] == "A" || b[i] == "E" || b[i] == "I" || b[i] == "O" || b[i] == "U"){
+        count++;
+    }
+}
+return count;
+}
+console.log(vowelSum(["Gopika"])); */
 
-
+let arr=[100,2220,300,400,500]
+  let min = Infinity;
+  let secondMin =Infinity;
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[i] < min) {
+      secondMin = min;
+      min = arr[i];
+    } else if (arr[i] < secondMin && arr[i] !== min) {
+      secondMin = arr[i];
+    }
+  }
+  console.log(min)
+  console.log(secondMin) 
+  /* function vowelSum(a){
+    let b = a.toString();
+    let count = 0;
+    for(let i = 0; i < b.length; i++){
+        if(b[i] == "a" || b[i] == "e" || b[i] == "i" || b[i] == "o" || b[i] == "u"|| b[i] == "A" || b[i] == "E" || b[i] == "I" || b[i] == "O" || b[i] == "U"){
+            count++;
+        }
+    }
+    return count;
+    }
+    console.log(vowelSum("Gopika")); */
 
 
 
