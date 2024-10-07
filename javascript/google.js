@@ -517,7 +517,7 @@ for(let i = 0; i < carNumber.length; i++){
 }
 console.log(sum); */
 
-let a = 7;
+/* let a = 7;
 let aa ="";
 for(let i = 1; i <= a; i++){
     if(i % 2 != 0 && i % 3 != 0){
@@ -527,7 +527,7 @@ for(let i = 1; i <= a; i++){
         aa ="Not prime number";
     }
 }
-console.log(aa);
+console.log(aa); */
 
 
 /* let c = 1;
@@ -540,34 +540,43 @@ for(let i = c; i <= d; d--){
     console.log(str);
 } */
 
-let d=5;
+/* let d=5;
 for(let i=1; i<=d; d--){
     let str =" "
     for(let j=1;j<=d;j++){
         str=str+j+" "
     }
     console.log(str)
+} */
+/* 
+let num = 53;
+let isPrime = true;
+
+if(num <= 1){
+    isPrime = false;
 }
+else {
+    for(let i = 2; i <= Math.sqrt(num); i++){
+        if(num % i === 0){
+            isPrime = false;
+            break;
+        }
+    }
+}
+if(isPrime){
+    console.log(num + " is prime number");
+}
+else {
+    console.log(num + " is a not prime number");
+} */
 
-
-
-
-
-        
-
-    
-    
-    
-       
-    
-   
-    
-    
-
-
-
-
-
-   
-
-
+    function primenumber(n) {
+        if (n <= 2) return "thi is a prime number";
+        for (let i = 2 ; i <= Math.sqrt(n); i++) {
+            if (n % i === 0) {
+                return "This is not a prime number";
+            }
+        }
+        return "This is a Prime Number";
+    }
+    console.log(primenumber(35));
