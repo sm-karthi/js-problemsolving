@@ -570,7 +570,7 @@ else {
     console.log(num + " is a not prime number");
 } */
 
-    function primenumber(n) {
+    /* function primenumber(n) {
         if (n <= 2) return "thi is a prime number";
         for (let i = 2 ; i <= Math.sqrt(n); i++) {
             if (n % i === 0) {
@@ -579,4 +579,70 @@ else {
         }
         return "This is a Prime Number";
     }
-    console.log(primenumber(35));
+    console.log(primenumber(35)); */
+
+    /* let str = "";
+    for(let i =1; i <= 5; i++){
+        let a = i * 5;
+        str += a +",";
+    }
+    console.log(str.slice(0,-1)); */
+
+    /* let arr = [4, 1, 9, 29, 5];
+    let empty = [];
+    let start = arr[0];
+    
+    for(let i = 0; i < arr.length; i++){
+        for(let j = i; j < arr.length; j++){
+        if(arr[j] < start){
+            start = arr[j];
+        } 
+    }    
+    empty.push(start);
+}
+    
+    console.log(empty);     */
+
+    /* function sortWithoutSort(a){
+        for(let i = 0;i<a.length;i++){
+            for(let j = i+1;j<a.length;j++){
+                if(a[j]<a[i]){
+                    /* let temp = a[i];
+                    a[i] = a[j];
+                    a[j]=temp; 
+                    [a[i],a[j]]=[a[j],a[i]];
+                }
+                
+            }            
+        }
+        return a;
+    }
+    let array = [9, 11, 1, 5, 8];
+    console.log(sortWithoutSort(array)); */
+
+    /* let n = 3;
+
+for(let i = n; i >= 1; i--){
+    let str = "";
+    for(let j = 1; j <= i; j++){
+        str += "* ";
+    }
+        
+        console.log(str.trim());
+}  */
+/* let n = 3; 
+let str = "";
+for(let i = 1; i <= n; i++){
+    str +=i+" ";
+    console.log(str);
+}
+ */
+
+let a = ["1, 2, 3, 4, 5"];
+let b = a.toString().split("").join("");
+let str = 0;
+for(let i = 0; i < b.length; i++){
+    str += b[i];
+}
+console.log(str);
+

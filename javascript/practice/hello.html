@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Name Form</title>
+    <style>
+        table, th, td {
+            border: 1px solid black;
+            border-collapse: collapse;
+        }
+        th, td {
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h2>Enter Your Name</h2>
+    <form id="nameForm">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+        
+        <input type="submit" value="Submit">
+    </form>
+
+    <h3>Saved Names</h3>
+    <table id="nameTable">
+        <thead>
+            <tr>
+                <th>Name</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Dynamically inserted rows will appear here -->
+        </tbody>
+    </table>
+
+    <script>
+        // Get references to form, input, and table body
+        const form = document.getElementById('nameForm');
+        const nameInput = document.getElementById('name');
+        const tableBody = document.querySelector('#nameTable tbody');
+
+        // Function to add name to the table
+        function addNameToTable(name) {
+            // Create a new row
+            const newRow = document.createElement('tr');
+            
+            // Create a new cell and add name text
+            const nameCell = document.createElement('td');
+            nameCell.textContent = name;
+
+            // Append the cell to the row
+            newRow.appendChild(nameCell);
+
+            // Append the row to the table body
+            tableBody.appendChild(newRow);
+        }
+
+        // Handle form submission
+        form.addEventListener('submit', function(event) {
+            // Prevent the default form submission (page reload)
+            event.preventDefault();
+
+            // Get the value of the name input
+            const nameValue = nameInput.value;
+
+            // Add the name to the table
+            addNameToTable(nameValue);
+
+            // Clear the input field
+            nameInput.value = '';
+        });
+    </script>
+</body>
+</html>

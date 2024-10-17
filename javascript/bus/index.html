@@ -1,0 +1,59 @@
+<html>
+
+<head>
+    <title>Bus Ticket Booking</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+
+<body>
+    
+    <h1 id="karthi">Karthikeyan</h1>
+    <h2 id="Sec">Sec : B</h2>
+    <button onclick="change()">change</button>
+    <div class="container">
+    <button id="subject">create</button>
+    <button id="Remove">Remove</button>
+        </div>
+    <script>
+        document.title = "Karthikeyan";
+        function change() {
+            let change = document.getElementById("karthi");
+            change.textContent = "Arumugakani";
+            change.style.color = "red";
+            let Sec = document.getElementById("Sec");
+            Sec.textContent = "Sec - 'B'";
+            Sec.style.color = "blue";
+            let crate = document.createElement("h1");
+        }
+
+        let container = document.querySelector(".container");
+        let subject = document.getElementById("subject");
+
+        subject.addEventListener("click", () => {
+            
+            let p = document.createElement("p");
+            
+            p.textContent = "Tamil";
+            document.body.appendChild(p);
+            p.classList.add("last");
+            container.appendChild(p);
+        });
+
+        let Remove = document.getElementById("Remove");
+
+        Remove.addEventListener("click", () => {
+            let lastBox = document.querySelector(".last:last-child");
+            if(lastBox){
+                container.removeChild(lastBox);
+            }
+            else {
+                alert("Vanakam da Mapla");
+            }
+        });
+
+
+
+    </script>
+</body>
+
+</html>

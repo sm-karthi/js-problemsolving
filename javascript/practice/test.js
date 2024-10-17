@@ -130,12 +130,3 @@ let arr=[100,2220,300,400,500]
     return count;
     }
     console.log(vowelSum("Gopika")); */
-
-
-
-  
-
-
-
-
-
