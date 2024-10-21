@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .look {
+            width: 70px;
+            height: 70px;
+            background-color: green;
+            margin: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1 id="h1">Dom Pratice for </h1>
+    <button id="addbutton">Add</button>
+    <button id="removebutton">Remove</button>
+    <button id="h1tag">Show Heading</button>
+    <button id="count">Count box</button>
+    <button id="link">Show link</button>
+
+    <script>
+const h = document.getElementById("h1tag");
+const header = document.getElementById("h1");
+h.addEventListener("click", () => {
+    alert(header.innerText);
+})
+</script>
+</body>
+</html>

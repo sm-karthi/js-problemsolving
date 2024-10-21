@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #form {
+            display: flex;
+            flex-direction: column;
+        }
+        #form input {
+            margin-bottom: 5px;
+            width: 250px;
+        }
+        #form label{
+            margin-top: 5px;
+        }
+        #form button{
+            width: 80px;
+        }
+    </style>
+</head>
+<body>
+    <form action="" id="form">
+        <label for="password">password</label>
+        <input type="password" id="password" name="password">
+        <span id="passError"></span>
+
+        <label for="cpassword">Confirm Password</label>
+        <input type="password" id="cpassword" name="cpassword">
+        <span id="CpassError"></span>
+
+        <button type="submit" id="submit">Submit</button>
+    </form>
+
+    <script>
+
+        const minLength = 7;
+        const form = document.getElementById("form");
+        const password = document.getElementById("password");
+        const cpassword = document.getElementById("cpassword");
+
+        const passError = document.getElementById("passError");
+        const CpassError = document.getElementById("CpassError");
+
+        const submit = document.getElementById("submit");
+        form.addEventListener("submit", (event) => {
+            passError.textContent = "";
+            CpassError.textContent = "";
+
+
+            if(password.value.length === 0){
+                passError.textContent = "Password required";
+                event.preventDefault();
+            }
+            else if(password.value.length < minLength){
+                passError.textContent = `Password must be at least ${minLength} character long`;
+                event.preventDefault();
+            }
+
+            if(password.value !== cpassword.value){
+                CpassError.textContent = "Password do not match";
+                event.preventDefault();
+            }
+
+
+        });
+
+        password.addEventListener("input", () => {
+            if(password.value.length < minLength){
+                passError.textContent = `Password must be at least ${minLength} character long, Your entered ${password.value.length}`;
+            }
+            else {
+                passError.textContent = "";
+            }
+        });
+
+        cpassword.addEventListener("input", () => {
+            if(password.value !== cpassword.value){
+                CpassError.textContent = "passwords do not match";
+            }
+            else {
+               CpassError.textContent = "";
+            }
+        })
+    </script>
+</body>
+</html>

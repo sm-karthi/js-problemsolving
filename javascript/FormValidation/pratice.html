@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+
+        }
+
+        #form {
+            display: flex;
+            flex-direction: column;
+            background-color: aqua;
+            width: fit-content;
+            padding: 30px 60px;
+
+        }
+
+        #form input {
+            width: 250px;
+            padding: 10px;
+            font-size: 16px;
+            border-radius: 10px;
+            margin-bottom: 10px;
+            border: 2px solid green;
+
+        }
+        #form input:focus{
+           outline: 0;
+        }
+
+        #form h1 {
+            text-align: center;
+        }
+
+        #form label {
+            font-size: 20px;
+            margin-top: 10px;
+            font-family: "Poppins", sans-serif;
+        }
+
+        #form button {
+            width: 100%;
+            height: 30px;
+            background-color: black;
+            color: white;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+
+        #nameError {
+            color: red;
+            font-size: 15px;
+        }
+
+        #emailError {
+            color: red;
+            font-size: 15px;
+        }
+
+        #passError {
+            color: red;
+            font-size: 15px;
+        }
+
+        #cpassError {
+            color: red;
+            font-size: 15px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <form action="" id="form" novalidate>
+            <h1>Register</h1>
+            <label for="name">User Name</label>
+            <input type="text" id="name" name="name">
+            <span id="nameError"></span>
+
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required>
+            <span id="emailError"></span>
+
+            <label for="password">Password</label>
+            <input type="password" id="password" name="password">
+            <span id="passError"></span>
+
+            <label for="cpassword">Confirm Password</label>
+            <input type="password" id="cpassword" name="cpassword">
+            <span id="cpassError"></span>
+
+            <button type="submit" id="submit">Submit</button>
+        </form>
+    </div>
+
+
+
+    <script>
+
+        const minLength = 8;
+        const form = document.getElementById("form");
+        const name = document.getElementById("name");
+        const email = document.getElementById("email");
+        const password = document.getElementById("password");
+        const cpassword = document.getElementById("cpassword");
+
+        const nameError = document.getElementById("nameError");
+        const emailError = document.getElementById("emailError");
+        const passError = document.getElementById("passError");
+        const cpassError = document.getElementById("cpassError");
+
+        const submit = document.getElementById("submit");
+
+
+        form.addEventListener("submit", (event) => {
+            nameError.textContent = "";
+            emailError.textContent = "";
+            passError.textContent = "";
+            cpassError.textContent = "";
+
+            if (name.value.length === 0) {
+                nameError.textContent = "User name required";
+                event.preventDefault();
+            }
+
+            if (email.value.length === 0) {
+                emailError.textContent = "Email required";
+                event.preventDefault();
+            }
+            else if (email.validity.typeMismatch) {
+                emailError.textContent = "Please enter valid email";
+                event.preventDefault();
+            }
+
+            if (password.value.length === 0) {
+                passError.textContent = "password required";
+                event.preventDefault();
+            }
+            else if (password.value.length < minLength) {
+                passError.textContent = `Password must be at least ${minLength} characters long.`;
+                event.preventDefault();
+            }
+
+            if (password.value !== cpassword.value) {
+                cpassError.textContent = "Passwords do not match";
+                event.preventDefault();
+            }
+        });
+
+        password.addEventListener("input", () => {
+            if (password.value.length < minLength) {
+                passError.textContent = `Password must be at least ${minLength} characters long, Your entered ${password.value.length}`;
+            }
+            else {
+                passError.textContent = "";
+            }
+        });
+
+        cpassword.addEventListener("input", () => {
+            if (password.value !== cpassword.value) {
+                cpassError.textContent = "password do not match";
+            }
+            else {
+                cpassError.textContent = "";
+            }
+        });
+
+    </script>
+</body>
+
+</html>
