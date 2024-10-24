@@ -50,32 +50,15 @@ for (let i = 0; i < arrr.length; i++) {
 
 console.log(str.slice(0, -1));
 
-// Question 2
-let num = [5, 8, 2, 20, 17];
-let eStr = "";
-let m = num[0];
-for (let i = 0; i < num.length; i++) {
-    if (m > num[i]) {
-        m = num[i];
-        eStr += m;
-    }
+// Linear Search
+let x = [12, 56, 90, 45, 38, 3]; 
+let target = 45;
+let result = -1;
 
-}
-for (let j = 0; j < num.length; j++) {
-    if (m < num[j]) {
-        
-        eStr+=num[j];
-        m = num[j];
-
+for(let i = 0; i < x.length; i++){
+    if(x[i] === target){
+        result = i;
+        break;
     }
 }
-console.log(eStr);
-
-
-
-
-
-
-
-
-
+console.log(result);
