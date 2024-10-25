@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <form action="" id="form">
+            <input type="text" id="name" placeholder="User Name">
+            <input type="email" id="email" placeholder="Enter Your Email">
+            <input type="password" id="password" placeholder="Enter password">
+            <button type="submit" id="submit">Submit</button>
+        </form>
+    </div>
+</body>
+<script>
+    
+
+    form.addEventListener("submit",(event)=>{
+            const name=document.getElementById("name").value
+            const email=document.getElementById("email").value
+            const password=document.getElementById("password").value
+            
+            const btn=document.getElementById("submit");
+            const minlength=7;
+                let user = {
+                name: name,
+                email: email,
+                password: password
+            };
+            localStorage.setItem("user", JSON.stringify(user));
+        })
+</script>
+</html>
