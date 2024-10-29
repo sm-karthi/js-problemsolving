@@ -70,3 +70,10 @@ function fun(arr){
     return count;
 }
 console.log(fun([1,2,3,4,5,6]));
+
+let obj = {
+    name : "Karthi",
+    age : 18
+};
+obj.mark = 200;
+console.log(obj);
