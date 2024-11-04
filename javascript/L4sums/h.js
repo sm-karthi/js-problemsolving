@@ -1,4 +1,4 @@
-// prime numbers between a & b
+/* // prime numbers between a & b
 let a = 10;
 let b = 20;
 let str ='';
@@ -68,5 +68,45 @@ function reverseString(string){
    let c = b.join(" "); 
    console.log(c); 
 }
-reverseString("i love programming very much");
+reverseString("i love programming very much"); */
 
+// Find the index of the first maximum in the array. for eg arr = [4, 5, 1, 2, 5, 3] index is 1.
+
+let arr = [4, 5, 1, 2, 5, 3];
+let a = arr[0];
+let result = 0;
+for(let i = 0; i < arr.length; i++){
+    if(arr[i] > a){
+        a = arr[i];
+        result = i;
+    }
+}
+console.log(result);
+
+//Given an array find all the values less than 15 in a new array if not print No Element less than 15.  Example if arr = [4, 15, 8, 25, 30] output is 4, 8. if ar = [19, 89, 90, 18] output No element less than 15
+
+let array = [4, 15, 8, 25, 30];
+let emptyArr = [];
+for(let i = 0; i < array.length; i++){
+    if(15 > array[i]){  
+        emptyArr.push(array[i]);
+    }
+}
+if(emptyArr.length === 0){
+    console.log("No element less than 15");
+}
+else{
+    console.log(emptyArr);
+}
+
+// Implement the linear search algorithm
+
+let aa = [20, 35, 43, 12, 67, 90];
+let element = 90;
+let res = -1;
+for(let i = 0; i < aa.length; i++){
+    if(aa[i] === element){
+        res = i;
+    }
+}
+console.log(res);

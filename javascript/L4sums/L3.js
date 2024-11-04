@@ -58,6 +58,3 @@ for(let i = 0; i < b.length; i++){
     else{
         console.log("Not Harshad");
     }
-
-    
-
