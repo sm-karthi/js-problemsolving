@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #container {
+            padding: 20px;
+        }
+
+        .company-card {
+            background-color: #fff;
+            border-radius: 8px;
+            padding: 15px;
+            margin: 10px 0;
+            border: 1px solid black;
+        }
+
+        .company-card h3 {
+            margin: 0;
+            font-weight: bold;
+        }
+
+        .company-card p {
+            margin: 5px 0;
+            color: #666;
+        }
+
+        .industry {
+            font-style: italic;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="container"></div>
+
+    <script>
+
+        const url = "https://fake-json-api.mock.beeceptor.com/companies";
+
+
+        fetch(url)
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error("Network response was not ok " + response.statusText);
+                }
+                return response.json();
+            })
+            .then(data => {
+
+                displayCompanies(data);
+            })
+            .catch(error => console.error("There was a problem with the fetch operation:", error));
+
+
+        function displayCompanies(companies) {
+            const container = document.getElementById("container");
+            companies.forEach(company => {
+                const companyCard = document.createElement("div");
+                companyCard.classList.add( "company-card");
+
+
+                const companyName = document.createElement("h3");
+                companyName.textContent = company.name;
+                companyCard.appendChild(companyName);
+
+
+                const companyAddress = document.createElement("h4");
+                companyAddress.textContent = company.address;
+                companyCard.appendChild(companyAddress);
+
+
+                const companyIndustry = document.createElement("h4");
+                companyIndustry.className = "industry";
+                companyIndustry.textContent = `Industry: ${company.industry}`;
+                companyCard.appendChild(companyIndustry);
+
+                container.appendChild(companyCard);
+            });
+        }
+
+    </script>
+</body>
+
+</html>
