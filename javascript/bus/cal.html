@@ -1,0 +1,73 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calendar Pop-up</title>
+
+    <!-- Link to Flatpickr CSS (for styling) -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+
+    <style>
+        /* Basic styling for calendar container */
+        .calendar-container {
+            display: inline-block;
+            position: relative;
+        }
+
+        /* Style for the calendar icon */
+        .calendar-icon {
+            cursor: pointer;
+            font-size: 24px;
+        }
+
+        /* Style for the input field */
+        .date-input {
+            padding: 10px;
+            font-size: 16px;
+            width: 200px;
+        }
+
+        /* Optional: Style for the Flatpickr calendar */
+        .flatpickr-calendar {
+            z-index: 9999 !important; /* Make sure it appears above other elements */
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Calendar Icon and Input -->
+    <div class="calendar-container">
+        <!-- Calendar Icon (Font Awesome) -->
+        <span id="calendarIcon" class="calendar-icon fas fa-calendar-days"></span>
+
+        <!-- Input Field for Date -->
+        <input type="text" id="dateInput" class="date-input" placeholder="Select Date" readonly>
+    </div>
+
+    <!-- Include Flatpickr JS -->
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+
+    <script>
+        // Initialize Flatpickr
+        flatpickr("#dateInput", {
+            allowInput: true, // Allow direct input of the date
+            onChange: function(selectedDates, dateStr, instance) {
+                // When a date is selected, display it in the input field
+                document.getElementById('dateInput').value = dateStr;
+            }
+        });
+
+        // Optional: Open the Flatpickr calendar when clicking on the calendar icon
+        document.getElementById('calendarIcon').addEventListener('click', function() {
+            // Trigger the flatpickr calendar to open
+            document.getElementById('dateInput').focus();
+        });
+    </script>
+
+    <!-- Font Awesome CDN (for calendar icon) -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/js/all.min.js"></script>
+
+</body>
+</html>
+ 

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Calendar</title>
+
+    <!-- Link to Flatpickr CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+
+    <style>
+        /* Basic styling for body */
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f4f4f4;
+        }
+
+        /* Basic style for the calendar container */
+        .calendar-container {
+            display: flex;
+            align-items: center;
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Style for the calendar icon */
+        .calendar-icon {
+            font-size: 24px;
+            color: #007BFF;
+            margin-right: 10px;
+            cursor: pointer;
+        }
+
+        .calendar-icon:hover {
+            color: #0056b3;
+        }
+
+        /* Style for the input field */
+        .date-input {
+            padding: 8px;
+            font-size: 16px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            width: 180px;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Calendar Icon and Input -->
+    <div class="calendar-container">
+        <!-- Calendar Icon (Font Awesome) -->
+        <span id="calendarIcon" class="calendar-icon fas fa-calendar-days"></span>
+
+        <!-- Input Field for Date -->
+        <input type="text" id="dateInput" class="date-input" placeholder="Select Date" readonly>
+    </div>
+
+    <!-- Include Flatpickr JS -->
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+
+    <!-- Font Awesome CDN (for calendar icon) -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/js/all.min.js"></script>
+
+    <script>
+        // Initialize Flatpickr with basic options
+        flatpickr("#dateInput", {
+            altInput: true,                // Use an alternate input style
+            altFormat: "F j, Y",           // Format the date as Month day, Year (e.g., November 10, 2024)
+            dateFormat: "d-m-Y",           // Format for the value stored (ISO 8601)
+            allowInput: true,              // Allow user to type in the date
+            locale: "en",                  // Set the locale (English)
+            minDate: "today",              // Disable past dates
+            maxDate: new Date().fp_incr(365), // Disable dates after one year from today
+            onChange: function(selectedDates, dateStr, instance) {
+                // Update input field with selected date
+                document.getElementById('dateInput').value = dateStr;
+            }
+        });
+
+        // Open Flatpickr calendar when clicking on the calendar icon
+        const calender = document.getElementById('calendarIcon');
+        calender.addEventListener('click', function() {
+            document.getElementById('dateInput').focus();
+        });
+    </script>
+
+</body>
+
+</html>
