@@ -517,9 +517,9 @@ for(let i = 0; i < carNumber.length; i++){
 }
 console.log(sum); */
 
-/* let a = 7;
+/* let n = 8;
 let aa ="";
-for(let i = 1; i <= a; i++){
+for(let i = 1; i <= n; i++){
     if(i % 2 != 0 && i % 3 != 0){
         aa ="prime number";
     }

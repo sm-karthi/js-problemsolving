@@ -147,7 +147,8 @@ console.log(set_arr); */
 
  let arr=[12, 15, 18, 15, 20];
 arr.sort((a,b)=>a-b);
-let istrue=false;
+console.log(arr);
+
 
 //[12,15,15,18,20]
 /* 

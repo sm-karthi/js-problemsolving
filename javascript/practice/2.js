@@ -77,7 +77,7 @@ console.log(keys[values.indexOf(Math.max(...values))]);
 //     m:1;
 // }
 
-/* function kudakaMandaka(arr){
+/* function kudakaMandak[o[a(arr){
     let empty1 = [];
 for(let i = 0; i < arr.length; i++){
     let empty = [];

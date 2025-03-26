@@ -11,7 +11,7 @@
     }
 } */
 
-    /* function GCD(a, b){
+    function GCD(a, b){
         let c = a > b ? a : b ;
         let str = 0;
         for(let i = 0; i <= c; i++){
@@ -21,7 +21,7 @@
         }
         return str; 
     }
-    console.log(GCD(12, 30)); */
+    console.log(GCD(12, 30));
 
     /* function PrimeNumber(n){
         let prime = true;
@@ -39,7 +39,7 @@
     }
     PrimeNumber(10); */
 
-    /* function LCM(a, b){
+    function LCM(a, b){
         let c = a > b ? a : b ;
         let str = 1;
         for(let i = 0; i <= c; i++){
@@ -50,9 +50,9 @@
         }
         return a*b/str; 
     }
-    console.log(LCM(44, 78)); */
+    console.log(LCM(44, 78));
 
-    /* function gCd(a, b){
+    function gCd(a, b){
         let c = a > b ? a : b ;
         let str = 0 ;
         for(let i = 2; i <= c; i++){
@@ -63,7 +63,7 @@
         }
         return str; 
     }
-    console.log(gCd(15, 30)); */
+    console.log(gCd(15, 30));
       //patten sums
 
                      //        *
